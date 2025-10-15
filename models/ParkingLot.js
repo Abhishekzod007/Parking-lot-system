@@ -51,8 +51,8 @@ class ParkingLot {
     }
 
     exitVehicle(ticketId){
-       const ticket = this.tickets.find(t => t.ticketId === ticketId)
-       if(!ticket) return console.log('Invalid ticket');
+       const ticket = this.tickets.find(t => t.ticketId == ticketId)
+       if(!ticket) return { error: "Invalid Ticlet ID"};
 
        const exitTime = new Date();
        const hours = Math.ceil((exitTime-ticket.EntryTime)/(1000*60*60))
@@ -61,7 +61,7 @@ class ParkingLot {
 
        ticket.closeTicket(exitTime,amount)
 
-       ticket.slot.free()
+       ticket.SlotNumber.Free()
 
        console.log(`Vehicle ${ticket.vehicle.number} exited. Total charge: ${amount}`);
        

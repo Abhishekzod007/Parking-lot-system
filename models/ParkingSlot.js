@@ -1,14 +1,14 @@
 class ParkingSlot{
-    constructor(type, id){
+    constructor(id, type){
         this.type = type
-        this.isAvalable = true
+        this.isAvailable = true
         this.id = id
     }
     Occupy(){
-        this.isAvalable = false
+        this.isAvailable = false
     }
     Free(){
-        this.isAvalable = true
+        this.isAvailable = true
     }
 }
 
