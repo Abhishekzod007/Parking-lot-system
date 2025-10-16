@@ -69,5 +69,5 @@ app.get("/slots", (req, res) => {
 
 // start server
 app.listen(port, () => {
-  console.log(`🚗 Server running at http://localhost:${port}`);
+  console.log(` Server running at http://localhost:${port}`);
 });
