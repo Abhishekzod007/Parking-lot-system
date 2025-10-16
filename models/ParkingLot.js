@@ -45,6 +45,7 @@ class ParkingLot {
             this.tickets.length +1
             
         )
+        ticket.floor = FloorNumber
         this.tickets.push(ticket)
         console.log(`Vehicle ${vehicle.number} parked at Floor ${FloorNumber}, Slot  ${slot.id}`);
         return ticket

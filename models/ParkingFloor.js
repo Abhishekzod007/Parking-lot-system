@@ -5,7 +5,7 @@ class ParkingFloor{
 
     }
     getAvailableSlot(vehicleType) {
-        return this.slots.find(slot=> slot.type === vehicleType && slot.isAvalable)
+        return this.slots.find(slot=> slot.type.toUpperCase() === vehicleType.toUpperCase() && slot.isAvailable)
     }
 }
 

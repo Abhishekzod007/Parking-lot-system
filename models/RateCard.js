@@ -16,8 +16,10 @@ class RateCard {
     }
     }
     calculateRate(vehicle,day,hours){
-        const rate = this.dayRates[day] + this.vehicleRates[vehicle]
-        return rate*hours
+    const vehicleKey = (vehicle || "").toString().toUpperCase();
+    const vehicleRate = this.vehicleRates[vehicleKey] ?? 0;
+    const dayRate = this.dayRates[day] ?? 0;
+    return (dayRate + vehicleRate) * (hours ?? 0);
     }
 }
 module.exports = RateCard
